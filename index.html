@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kyran Ford</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="home-container" id="home-container">
+        <div class="nav-container">
+            <button onclick="scrollFunction('work-container')">My Work</button>
+            <button onclick="scrollFunction('about-container')">About me</button>
+            <button onclick="scrollFunction('contact-container')">Contact</button>
+        </div>
+        <div class="intro-container">
+            <h1 id="top-h1"></h1>
+            <h1 id="middle-h1"></h1>
+            <h2 id="bottom-h2"></h2>
+            <button id="scroll-button" onclick="scrollFunction('work-container')">&downarrow;</button>
+        </div>
+    </div>
+    <div class="work-container" id="work-container">
+        <h1 class="project-title">My Work</h1>
+        <div class="project-row reveal-up">
+            <div class="project-container" id="project-container">
+                <div class="project-thumbnail">
+                    <h2>My Website</h2>
+                    <img src="images/website-thumbnail.png" alt="">
+                    <div class="project-links">
+                        <button onclick="location.href='https://kyranford.github.io/';" target="_blank">Live Site</button>
+                        <button onclick="location.href='https://github.com/KyranFord/kyranford.github.io';" target="_blank">Source Code</button>
+                    </div>
+                </div>
+            </div>
+            <div class="project-container" id="project-container">
+                <div class="project-thumbnail">
+                    <h2>World Cup Hangman</h2>
+                    <img src="images/hangman-thumbnail.png" alt="">
+                    <div class="project-links">
+                        <button onclick="location.href='https://kyranford.github.io/hangman';" target="_blank">Live Site</button>
+                        <button onclick="location.href='https://github.com/KyranFord/hangman';" target="_blank">Source Code</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about-container" id="about-container">
+        <div class="about-description reveal-left">
+            <h1>About Me</h1>
+            <p>I am a BSc (Hons) Mathematics graduate, currently studying MSc Artificial Intelligence. I am passionate and facinated about AI and its uses in modern technology and software.</p>
+        </div>
+    </div>
+    <div class="contact-container" id="contact-container">
+        <div class="form-container reveal-up">
+            <h2>Contact Me</h2>
+                <form action="https://mailthis.to/kyranford@hotmail.co.uk" method="POST"
+                    method="POST" encType="multipart/form-data">
+                    <div class="form-inputs">
+                        <input type="text" name="name" placeholder="Your name" class="entry">
+                        <input type="email" name="email" placeholder="youremail@email.com" class="entry">
+                        <input type="text" name="phone" placeholder="Contact Number" class="entry">
+                        <textarea name="message" placeholder="Enter your message here" class="message-entry"></textarea>
+                        <input type="hidden" name="_subject" value="Contact form submitted">
+                        <input type="hidden" name="_honeypot" value="">
+                        <input type="hidden" name="_confirmation" value="">
+                    </div>
+                    <input type="submit" name="submit" value="Submit Form" class="submit-button">
+                </form>
+            
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

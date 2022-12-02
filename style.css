@@ -1,0 +1,288 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+/* blue - #5bccf6   yellow - #fcde67  black - #030e12 */
+* {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    background-color: #fcde67;
+}
+.home-container {
+    height: 100vh;
+}
+.nav-container {
+    height: auto;
+    display: flex;
+    text-align: right;
+    padding: 20px;
+    margin-right: 2%;
+    float: right;
+}
+
+.nav-container button {
+    background-color: transparent;
+    text-decoration: none;
+    font-size: 20px;
+    padding: 20px;
+    text-transform: lowercase;
+    color: #030e12;
+    border: 0;
+}
+.nav-container button:hover {
+    text-decoration: underline;
+    color: #5bccf6;
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+    cursor: pointer;
+}
+
+.intro-container{
+    height: auto;
+    padding-top: calc(25vh);
+    text-align: center;
+}
+.intro-container h1 {
+    display: block;
+    font-size: 90px;
+}
+.intro-container h2 {
+    display: block;
+    font-size: 30px;
+}
+#top-h1{
+    padding-right: 2.5em;
+}
+#bottom-h2{
+    padding-top: 0.5em;
+    padding-left: 4em;
+}
+#scroll-button{
+    padding: 1em 1em;
+    color: #030e12;
+    border: solid #030e12 4px;
+    background-color: transparent;
+    font-size: 20px;
+    position: absolute; 
+    margin-left:-50px;
+    left:50%;
+    width:100px;
+    margin-top: 7vh;
+    border-radius: 3em;
+    cursor:pointer;
+}
+#scroll-button:hover{
+    color: #5bccf6;
+    border: solid #5bccf6 4px;
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+
+.work-container{
+    min-height: 100vh;
+}
+.project-row {
+    display: flex;
+}
+.project-container{
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+.project-title {
+    display: block;
+    font-size: 3vw;
+    text-decoration: underline;
+    text-align: center;
+    margin: 5vw;
+}
+.project-thumbnail{
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+}
+.project-thumbnail h2 {
+    font-size: 2vw;
+    padding-bottom: 1vw;
+}
+.project-thumbnail img{
+    border: solid #030e12 5px ;
+    margin-bottom: 2vw;
+    width: 33vw;
+    filter: drop-shadow(10px 10px 0px black);
+    -webkit-animation: fadeInLeft 1.2s both; /* Safari 4+ */
+    -moz-animation: fadeInLeft 1.2s both; /* Fx 5+ */
+    -o-animation: fadeInLeft 1.2s both; /* Opera 12+ */
+    animation: fadeInLeft 1.2s both; /* IE 10+, Fx 29+ */
+}
+
+.project-links button{
+    background-color: transparent;
+    text-decoration: none;
+    text-transform: lowercase;
+    color: #030e12;
+    border: 0;
+    font-size: 1.5vw;
+    padding: 1vw;
+    color: #030e12;
+    cursor: pointer;
+}
+.project-links button:hover{
+    text-decoration: underline;
+    color: #5bccf6;
+    transform: scale(1.2);
+    transition-duration: 0.5s;
+}
+
+.about-container {
+    height: 100vh;
+    display: flex;
+    background: url(images/about-me-image.png) no-repeat center center fixed;
+    background-size: cover;
+    justify-content: center;
+}
+
+.about-description {
+    position: relative;
+    top: 15%;
+    width: 50em;
+    height: fit-content;
+    background-color: #fcde67;
+    filter: drop-shadow(10px 10px 0px black);
+}
+.about-description h1 {
+    padding: 20px;
+    font-size: 3vw;
+    text-decoration: underline;
+}
+.about-description p {
+    padding: 10px;
+    font-size: 1.5vw;
+}
+
+.reveal-up{
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal-up.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+.reveal-left{
+    position: relative;
+    transform: translateX(-150px);
+    opacity: 0;
+    transition: 1s all ease;
+  }
+  
+.reveal-left.active{
+    transform: translateX(0);
+    opacity: 1;
+}
+.button-wiggle{
+    -webkit-animation: btnWiggle 2s;
+    -moz-animation: btnWiggle 2s;
+    -o-animation: btnWiggle 2s;
+    animation: btnWiggle 2s;
+  }
+
+@-webkit-keyframes btnWiggle {
+	0% {-webkit-transform: scale(1) rotate(0deg);}
+    20% {-webkit-transform: scale(1.2) rotate(0deg);}
+    30% {-webkit-transform: scale(1.2) rotate(10deg);}
+    35% {-webkit-transform: scale(1.2) rotate(-10deg);}
+    40% {-webkit-transform: scale(1.2) rotate(0deg);}
+	55% {-webkit-transform:  scale(1.2);}
+    60% {-webkit-transform:  scale(1);}
+    100% {-webkit-transform: scale(1) rotate(0deg);}
+}
+
+.contact-container {
+    margin-top: 5vh;
+    height: 50vh;
+    text-align: center;
+}
+.form-container h2 {
+    text-decoration: underline;
+    font-size: 2vw;
+    padding-bottom: 40px;
+}
+
+.form-container {
+    width: auto;
+}
+.form-inputs .entry, .message-entry{
+    color: black;
+    width: 60%;
+    padding: 5px;
+    margin: 5px;
+    border: solid #030e12 4px;
+    filter: drop-shadow(4px 4px 0px black);
+}
+.form-container .submit-button{
+    color: black;
+    background-color: white;
+    width: 40%;
+    cursor: pointer;
+    padding: 5px;
+    margin:0 auto;
+    display:block;
+    margin-top: 40px;
+    border: solid #030e12 4px;
+    filter: drop-shadow(4px 4px 0px black);
+}
+.form-container .submit-button:hover{
+    -webkit-transform: translate(4px);
+	transform: translate(4px);
+    filter: drop-shadow(0px 0px 0px);
+    transition: .5s;
+}
+
+@media screen and (max-width: 850px) {
+    .project-row {
+        flex-direction: column;
+    }
+    .project-title {
+        font-size: 6vw;
+    }
+    .project-thumbnail{
+        width: 100%;
+        padding: 2vw;
+    }
+    .project-thumbnail h2{
+        font-size: 4vw;
+    }
+    .project-thumbnail img {
+        width: 50vw;
+    }
+    .project-links button{
+        font-size: 3vw;
+    }
+    .about-description {
+        width: 80vw;
+    }
+    .about-description h1 {
+        font-size: 6vw;
+    }
+    .about-description p {
+        font-size: 3vw;
+    }
+    .form-container h2 {
+        font-size: 4vw;
+    }
+}
+  
+@media screen and (max-width: 600px) {
+    .project-thumbnail{
+        width: 100%;
+    }
+    .project-thumbnail img {
+        width: 75vw;
+    }
+}
