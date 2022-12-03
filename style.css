@@ -141,6 +141,7 @@ body {
     background: url(images/about-me-image.png) no-repeat center center fixed;
     background-size: cover;
     justify-content: center;
+    -webkit-backg
 }
 
 .about-description {
@@ -215,7 +216,15 @@ body {
 .form-container {
     width: auto;
 }
-.form-inputs .entry, .message-entry{
+.form-inputs .entry {
+    color: black;
+    width: 60%;
+    padding: 5px;
+    margin: 5px;
+    border: solid #030e12 4px;
+    filter: drop-shadow(4px 4px 0px black);
+}
+.form-inputs .message-entry {
     color: black;
     width: 60%;
     padding: 5px;
