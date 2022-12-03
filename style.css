@@ -11,7 +11,8 @@ body {
     background-color: #fcde67;
 }
 .home-container {
-    height: 100vh;
+    min-height: 100vh;
+    height: fit-content;
 }
 .nav-container {
     height: auto;
@@ -40,17 +41,17 @@ body {
 }
 
 .intro-container{
-    height: auto;
+    height: fit-content;
     padding-top: calc(25vh);
     text-align: center;
 }
 .intro-container h1 {
     display: block;
-    font-size: 90px;
+    font-size: 85px;
 }
 .intro-container h2 {
     display: block;
-    font-size: 30px;
+    font-size: 25px;
 }
 #top-h1{
     padding-right: 2.5em;
@@ -64,12 +65,9 @@ body {
     color: #030e12;
     border: solid #030e12 4px;
     background-color: transparent;
+    margin-top: 5em;
     font-size: 20px;
-    position: absolute; 
-    margin-left:-50px;
-    left:50%;
     width:100px;
-    margin-top: 7vh;
     border-radius: 3em;
     cursor:pointer;
 }
@@ -245,6 +243,9 @@ body {
 }
 
 @media screen and (max-width: 850px) {
+    .intro-container h1 {
+        font-size: 80px;
+    }
     .project-row {
         flex-direction: column;
     }
@@ -278,7 +279,10 @@ body {
     }
 }
   
-@media screen and (max-width: 600px) {
+@media screen and (max-height: 600px) {
+    .intro-container h1 {
+        font-size: 75px;
+    }
     .project-thumbnail{
         width: 100%;
     }
